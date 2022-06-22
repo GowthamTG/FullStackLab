@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function onLoad() {
+        console.log("Onload Called");
+        var textField = document.getElementById("text");
+        textField.innerHTML =
+          "<h1> Hi good morning to you </h1>" +
+          "<h4> Text Changed Successfully </h4>";
+        console.log("Text Changed Successfully");
+      }
+
+      function onUnload() {
+        const textField = document.getElementById("text");
+        textField.innerText = "Thanks for visiting our web page";
+      }
+    </script>
+  </head>
+  <body onload="onLoad()" onunload="onUnload()">
+    <h1 id="text">The Page is Successfully Loaded...</h1>
+    <h3>Welcome to the BLOG</h3>
+  </body>
+</html>
